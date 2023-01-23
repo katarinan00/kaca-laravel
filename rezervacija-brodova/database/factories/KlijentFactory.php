@@ -1,0 +1,26 @@
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Faker\Provider\en_US\Address;
+
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Klijent>
+ */
+class KlijentFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition()
+    {
+        return [
+            'imePrezime' => $this->faker->name(),
+            'brojTelefona' => $this->faker->phoneNumber(),
+            'grad' => $this->faker->city(),
+        ];
+    }
+}
