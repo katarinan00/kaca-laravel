@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('brodovi', function (Blueprint $table) {
             $table->id();
             $table->string('naziv',20);
-            $table->string('zemljaPorekla',20);
+            $table->string('zemljaPorekla',60);
             $table->integer('godiste');
             $table->timestamps();
         });
